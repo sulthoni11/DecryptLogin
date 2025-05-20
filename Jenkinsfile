@@ -1,8 +1,12 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs 'Node16' // Harus cocok dengan nama di konfigurasi Jenkins
+    }
+
     stages {
-        stage('Clone Repo') {
+        stage('Checkout') {
             steps {
                 git 'https://github.com/sulthoni11/DecryptLogin'
             }
