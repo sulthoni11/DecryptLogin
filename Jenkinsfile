@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'Node16' // Harus cocok dengan nama di konfigurasi Jenkins
+        nodejs 'Node16'
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/sulthoni11/DecryptLogin'
+                git branch: 'development', url: 'https://github.com/sulthoni11/DecryptLogin'
             }
         }
 
