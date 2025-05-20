@@ -1,10 +1,14 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs 'Node16'
+    }
+
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/sulthoni11/DecryptLogin'
+                git branch: 'development', url: 'https://github.com/sulthoni11/DecryptLogin'
             }
         }
 
